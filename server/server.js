@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const {graphqlHTTP} = require("express-graphql")
 const { dao } = require("./db/dao")
 const {rootSchema} = require("./schema/schemas")
@@ -8,6 +9,7 @@ const api = express()
 
 dao.ConnectToDB()
 
+api.use(cors())
 api.use('/graphql', graphqlHTTP({
     schema: rootSchema,
     graphiql: true

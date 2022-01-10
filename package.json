@@ -1,0 +1,26 @@
+{
+  "name": "graphql-novice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-client": "cd client && yarn start",
+    "start-server": "cd server && nodemon start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arnaldo-Manjate/grapgql-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arnaldo-Manjate/grapgql-training/issues"
+  },
+  "homepage": "https://github.com/Arnaldo-Manjate/grapgql-training#readme",
+  "dependencies": {
+    "@apollo/client": "^3.5.7",
+    "graphql": "^16.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
