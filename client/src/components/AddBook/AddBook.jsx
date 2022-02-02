@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useMutation, useQuery } from "@apollo/client";
 import { GET_AUTHORS_QUERY } from "../../queries/authors";
-import { ADD_BOOK_MUTATION } from "../../queries/books";
+import { ADD_BOOK_MUTATION, GET_ALL_BOOKS_QUERY } from "../../queries/books";
 
 const AddBook = (props) => {
   const { loading, error, data } = useQuery(GET_AUTHORS_QUERY);
@@ -18,6 +18,7 @@ const AddBook = (props) => {
   };
 
   const displayAuthors = (data) => {
+    console.log("[displayAuthors] data: ", data)
     if (loading) {
       return <option>loading authors ..</option>;
     } else if (error) {
@@ -31,9 +32,13 @@ const AddBook = (props) => {
     }
   };
 
+  //
   const submitForm = (event) => {
     event.preventDefault();
-    addBook({variables: {...state}})
+    addBook({
+      variables: {...state}, 
+      refetchQueries: [{query: GET_ALL_BOOKS_QUERY}]
+    })
 
     // if (submitError) return <option>creating book ..</option>;
     // if (submitionLoading) return <option> submistion error ...</option>;
