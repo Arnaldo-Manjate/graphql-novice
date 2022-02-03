@@ -3,6 +3,9 @@ import { useMutation, useQuery } from "@apollo/client";
 import { GET_AUTHORS_QUERY } from "../../queries/authors";
 import { ADD_BOOK_MUTATION, GET_ALL_BOOKS_QUERY } from "../../queries/books";
 
+/**
+ * AddBook
+ */
 const AddBook = (props) => {
   const { loading, error, data } = useQuery(GET_AUTHORS_QUERY);
   const [ addBook ,{bookData, submitionLoading, submitError}] = useMutation(ADD_BOOK_MUTATION);
