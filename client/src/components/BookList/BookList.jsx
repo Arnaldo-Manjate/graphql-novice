@@ -2,6 +2,7 @@ import React , {useState} from "react";
 import { gql, useQuery } from "@apollo/client";
 import { GET_ALL_BOOKS_QUERY } from "../../queries/books";
 import BookDetails from '../BookDetails/BookDetails';
+import "./Booklist.css"
 
 const BookList = (props) => {
 	const [selectedBookId, setSelectedBookId] = useState('')
