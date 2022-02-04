@@ -6,6 +6,10 @@ export const GET_AUTHORS_QUERY = gql`
       id
       name
       age
+      books { 
+        name 
+        genre
+      }
     }
   }
 `;
