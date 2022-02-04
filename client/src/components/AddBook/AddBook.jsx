@@ -43,8 +43,6 @@ const AddBook = (props) => {
       refetchQueries: [{query: GET_ALL_BOOKS_QUERY}]
     })
 
-    // if (submitError) return <option>creating book ..</option>;
-    // if (submitionLoading) return <option> submistion error ...</option>;
 
     console.log("[submit] sucecss:", bookData);
   };
