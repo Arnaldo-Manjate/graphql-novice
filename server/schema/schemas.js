@@ -50,7 +50,7 @@ const AuthorType = new GraphQLObjectType({
 		}
 	})
 });
-//
+
 const rootQuery = new GraphQLObjectType({
 	name: "RootQuery",
 	fields: {
