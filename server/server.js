@@ -9,7 +9,6 @@ const api = express();
 
 dao.ConnectToDB();
 
-//
 api.use(cors());
 api.use(
 	"/graphql",
